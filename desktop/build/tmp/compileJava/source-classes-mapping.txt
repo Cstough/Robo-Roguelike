@@ -1,2 +1,0 @@
-com/roguelike/game/desktop/DesktopLauncher.java
- com.roguelike.game.desktop.DesktopLauncher
