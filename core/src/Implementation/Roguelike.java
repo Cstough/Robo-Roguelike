@@ -11,7 +11,7 @@ import com.mygdx.game.Engine.ScreenManager;
 
 public class Roguelike extends Game {
 
-	ScreenManager screenManager;
+	static ScreenManager screenManager;
 	SpriteBatch batch;
 
 
@@ -20,7 +20,8 @@ public class Roguelike extends Game {
 		screenManager = new ScreenManager();
 		batch = new SpriteBatch();
 
-		screenManager.ChangeScreen(new MainMenuScreen());
+		screenManager.SetScreen(new MainMenuScreen());
+		screenManager.SetTransitionEffects(new FadeInEffect(), new FadeOutEffect());
 	}
 
 	@Override
