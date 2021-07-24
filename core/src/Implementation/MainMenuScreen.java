@@ -19,8 +19,8 @@ public class MainMenuScreen extends Screen {
 
     public MainMenuScreen() {
         assets = new Assets();
-
         camera = new OrthographicCamera(CAMERA_WIDTH, CAMERA_HEIGHT);
+
         //Load Assets Here
     }
 
