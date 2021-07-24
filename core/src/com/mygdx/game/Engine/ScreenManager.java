@@ -42,6 +42,8 @@ public class ScreenManager {
     }
 
     public void SetTransitionEffects(TransitionEffect In, TransitionEffect Out) {
+        In.SetupEffect();
+        Out.SetupEffect();
         transitionManager.SetTransitionEffects(In, Out);
     }
 }
