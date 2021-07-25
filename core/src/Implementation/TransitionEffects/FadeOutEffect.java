@@ -1,4 +1,4 @@
-package Implementation;
+package Implementation.TransitionEffects;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,7 +8,7 @@ import com.mygdx.game.Engine.TransitionEffect;
 
 import static Implementation.Constants.*;
 
-public class FadeInEffect extends TransitionEffect {
+public class FadeOutEffect extends TransitionEffect {
 
     float delay, accum;
     boolean done;
@@ -28,16 +28,12 @@ public class FadeInEffect extends TransitionEffect {
         accum += delta;
         if(accum > delay) {
             done = true;
-            accum = 0f;
         }
-        System.out.println("fading in! " + accum);
     }
 
     @Override
     public void Render(SpriteBatch batch) {
-        batch.begin();
-        test.draw(batch, 1f - (accum/delay));
-        batch.end();
+        test.draw(batch, accum/delay);
     }
 
     @Override

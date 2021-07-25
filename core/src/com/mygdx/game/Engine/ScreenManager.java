@@ -22,10 +22,12 @@ public class ScreenManager {
     }
 
     public void Render(SpriteBatch batch) {
+        batch.begin();
         currentScreen.Render(batch);
         if(transitionManager.IsTransitioning()) {
             transitionManager.Render(batch);
         }
+        batch.end();
     }
 
     public void ChangeScreen(Screen screen) {
