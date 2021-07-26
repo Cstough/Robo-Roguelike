@@ -1,8 +1,6 @@
 package Implementation.Screens;
 
 import Implementation.EntityManager;
-import Implementation.GameObjects.Test;
-import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
@@ -18,7 +16,6 @@ public class GameplayScreen extends Screen {
 
     public GameplayScreen() {
         entityManager = new EntityManager();
-        entityManager.AddEntity(new Test());
         camera = new OrthographicCamera(CAMERA_WIDTH, CAMERA_HEIGHT);
     }
 
@@ -28,8 +25,6 @@ public class GameplayScreen extends Screen {
         if(Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
             Gdx.app.exit();
         }
-
-        camera.translate(10f * delta, 10f * delta);
     }
 
     @Override

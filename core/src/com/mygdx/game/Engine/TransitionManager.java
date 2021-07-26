@@ -46,6 +46,8 @@ public class TransitionManager {
     }
 
     protected void BeginTransition() {
+        transitionEffect_IN.SetupEffect();
+        transitionEffect_OUT.SetupEffect();
         isTransitioning = true;
         transitionOUTDone = false;
     }
