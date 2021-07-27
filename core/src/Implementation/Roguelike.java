@@ -11,7 +11,7 @@ import com.mygdx.game.Engine.ScreenManager;
 public class Roguelike extends Game {
 
 	public static ScreenManager screenManager;
-	SpriteBatch batch;
+	public static SpriteBatch batch;
 
 
 	@Override

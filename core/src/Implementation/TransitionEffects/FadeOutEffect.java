@@ -21,6 +21,7 @@ public class FadeOutEffect extends TransitionEffect {
         done = false;
         test = new Sprite(new Texture(Gdx.files.internal("fade.png")));
         test.setScale(CAMERA_WIDTH * 1.1f, CAMERA_HEIGHT * 1.1f);
+        test.setOrigin(0, 0);
     }
 
     @Override
